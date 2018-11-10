@@ -10,17 +10,21 @@ const lookupFood = (item, callback) => {
 			console.log('Error in retrieving: %j Err: %j', item, err);
 		} else {
 			var $ = cheerio.load(body);
+			var count = 0;
 			// console.log('Body: %j', body);
 			$('td').each((i, elem) => {
 				if ($(elem).find('a').attr('href') && $(elem).find('a').attr('href').indexOf('ndb/foods/show') > 0) {
-					console.log('TD %s: %s', i, $(elem).text());
+					if (isNaN($(elem).text())) {
+						count++;
+						console.log('%s // %s', count, $(elem).text().trim());
+					}
 				}
 			});
 		}
 	});
 };
 
-lookupFood('Carrot', (err, results) => {
+lookupFood('Milk', (err, results) => {
 	if (err) {
 		console.log('Error could not find: %j', err);
 	} else {
