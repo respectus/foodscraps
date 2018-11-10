@@ -1,0 +1,19 @@
+{
+  "name": "foodscraps",
+  "version": "0.0.1",
+  "description": "Scripts for food",
+  "main": "foodscraps.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/respectus/foodscraps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/respectus/foodscraps/issues"
+  },
+  "homepage": "https://github.com/respectus/foodscraps#readme"
+}
